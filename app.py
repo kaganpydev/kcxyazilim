@@ -2,9 +2,7 @@ from flask import Flask, render_template, Response, send_from_directory
 
 app = Flask(__name__)
 
-# ==========================
-# ANA SAYFALAR
-# ==========================
+
 @app.route('/')
 def index():
     return render_template("index.html")
@@ -22,9 +20,7 @@ def hakkimizda():
     return render_template("hakkimizda.html")
 
 
-# ==========================
-# ALT SAYFALAR (EĞİTİM ATÖLYESİ ALTINDA)
-# ==========================
+
 @app.route('/akademi/cocuk-python')
 def cocuk_python():
     return render_template("cocuk-python.html")
@@ -43,5 +39,6 @@ def robots_txt():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
