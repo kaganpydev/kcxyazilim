@@ -1,0 +1,1097 @@
+/* ===================== */
+/* GENEL */
+/* ===================== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f4f6;
+  overflow-x: hidden;
+}
+
+/* ===================== */
+/* HEADER */
+/* ===================== */
+.site-header {
+  width: 100%;
+  background: #f3f4f6;
+  position: relative;
+  z-index: 1000;
+}
+
+/* ===================== */
+/* HEADER YAPISI */
+/* ===================== */
+.header-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 16px 60px;
+  box-sizing: border-box;
+}
+
+/* ===================== */
+/* LOGO (SABİT SOLDAN) */
+/* ===================== */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo img {
+  height: clamp(56px, 4vw, 72px);
+  width: auto;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+/* ===================== */
+/* ANA MENU + ILETISIM (TEK ÇERÇEVE) */
+/* ===================== */
+.menu-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: clamp(20px, 2vw, 40px);
+  background: #ffffff;
+  border: 2px solid #d1d5db;
+  border-radius: 16px;
+  padding: 12px clamp(20px, 3vw, 60px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+/* Menü linkleri */
+.menu-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(20px, 2vw, 40px);
+  flex-wrap: wrap;
+}
+
+.menu-links a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #111827;
+  font-size: clamp(14px, 1vw + 0.4rem, 18px);
+  white-space: nowrap;
+  transition: 0.2s;
+}
+
+.menu-links a:hover {
+  color: #2563eb;
+}
+
+/* ===================== */
+/* ILETISIM KISMI (ÇERÇEVE İÇİNDE) */
+/* ===================== */
+.menu-contact {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: clamp(12px, 1.5vw, 20px);
+}
+
+.menu-contact a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111827;
+  font-size: clamp(14px, 0.9vw + 0.3rem, 16px);
+  white-space: nowrap;
+  transition: 0.2s;
+}
+
+.menu-contact a i {
+  font-size: 20px;
+}
+
+.menu-contact a:hover {
+  color: #2563eb;
+  transform: scale(1.05);
+}
+
+.menu-contact .whatsapp {
+  color: #22c55e;
+}
+
+.menu-contact .whatsapp:hover {
+  color: #16a34a;
+}
+
+/* ===================== */
+/* HAMBURGER */
+/* ===================== */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #111827;
+}
+
+/* ===================== */
+/* MOBIL MENU */
+/* ===================== */
+.mobile-menu {
+  display: none;
+}
+
+/* ===================== */
+/* RESPONSIVE */
+/* ===================== */
+@media (max-width: 1280px) {
+  .menu {
+    padding: 10px clamp(16px, 2vw, 40px);
+    gap: 24px;
+  }
+
+  .menu-links {
+    gap: 24px;
+  }
+
+  .menu-contact {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .menu-wrapper {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    justify-self: end;
+  }
+
+  .header-container {
+    grid-template-columns: auto 1fr;
+    padding: 12px 24px;
+  }
+
+  .mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 16px;
+    width: 280px;
+    background: #ffffff;
+    border: 2px solid #d1d5db;
+    border-radius: 16px;
+    padding: 20px;
+    z-index: 2000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .mobile-menu.active {
+    display: block;
+  }
+
+  .mobile-menu nav {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .mobile-menu a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    color: #111827;
+  }
+
+  .mobile-menu a:hover {
+    color: #2563eb;
+  }
+
+  .mobile-contact {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .mobile-contact a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #111827;
+  }
+
+  .mobile-contact a[href*="wa.me"] {
+    color: #16a34a;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    height: 46px;
+  }
+
+  .mobile-menu {
+    width: 230px;
+    padding: 16px;
+  }
+
+  .mobile-menu a {
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* ANA SAYFA DUZENLEME KODLARI */
+
+/* ======== HERO ======== */
+.hero {
+  text-align: center;
+  padding: 120px 20px 80px;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: clamp(28px, 2.6vw, 48px);
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: clamp(16px, 1.2vw, 20px);
+  opacity: 0.9;
+  margin-bottom: 40px;
+}
+
+.hero-buttons .btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+.btn.primary { background: #fff; color: #2563eb; }
+.btn.primary:hover { background: #e5e7eb; }
+
+.btn.secondary {
+  border: 2px solid #fff;
+  color: #fff;
+}
+.btn.secondary:hover { background: #fff; color: #2563eb; }
+
+/* ======== HİZMETLER ======== */
+.services {
+  text-align: center;
+  padding: 80px 40px;
+  background: #fff;
+}
+.services h2 { margin-bottom: 40px; font-size: 32px; }
+
+.service-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.service-grid .card {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 30px 20px;
+  transition: 0.3s;
+}
+.service-grid .card:hover { transform: translateY(-5px); }
+.service-grid i {
+  font-size: 32px;
+  color: #2563eb;
+  margin-bottom: 16px;
+}
+
+/* ======== EĞİTİMLER ======== */
+.trainings {
+  text-align: center;
+  padding: 80px 40px;
+  background: #f3f4f6;
+}
+.training-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.training-grid .card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  transition: 0.3s;
+}
+.training-grid .card:hover { transform: translateY(-5px); }
+
+/* ======== PROJELER ======== */
+.projects {
+  text-align: center;
+  padding: 80px 40px;
+  background: #fff;
+}
+.project-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.project-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  opacity: 0;
+  transition: 0.3s;
+}
+.project-card:hover .overlay { opacity: 1; }
+
+/* ======== CONTACT CTA ======== */
+.contact-cta {
+  text-align: center;
+  padding: 80px 20px;
+  background: #1e40af;
+  color: #fff;
+}
+.contact-cta .btn {
+  display: inline-block;
+  margin: 8px;
+  padding: 12px 24px;
+  background: #fff;
+  color: #1e40af;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.contact-cta .btn:hover { background: #e0e7ff; }
+.contact-cta .btn.whatsapp {
+  background: #22c55e;
+  color: #fff;
+}
+.contact-cta .btn.whatsapp:hover {
+  background: #16a34a;
+}
+footer {
+  text-align: center;
+  padding: 20px 10px;
+  background: #f3f4f6; /* sayfayla aynı renk */
+  color: #111827;
+  font-weight: 600;
+  font-size: 16px;
+  border-top: 2px solid #d1d5db;
+}
+
+
+
+
+/* ===================== */
+/* HAKKIMIZDA SAYFASI */
+/* ===================== */
+.about-page {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+/* --- HERO --- */
+.about-hero {
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+  color: #fff;
+  text-align: center;
+  padding: 120px 10% 80px;
+}
+
+.about-hero-content h1 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.about-hero-content p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* --- METİN KUTUSU --- */
+.about-content {
+  display: flex;
+  justify-content: center;
+  padding: 80px 10%;
+}
+
+.about-card {
+  background: #ffffff;
+  border: 2px solid #d1d5db;
+  border-radius: 16px;
+  padding: 60px 70px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  max-width: 1000px;
+  text-align: left;
+  line-height: 1.8;
+}
+
+.about-card h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 24px;
+  color: #111827;
+}
+
+.about-card p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #374151;
+}
+
+/* --- DEĞERLER (ALT KARTLAR) --- */
+.about-values {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.value-card {
+  background: #fff;
+  border: 2px solid #d1d5db;
+  border-radius: 16px;
+  padding: 40px 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-6px);
+  border-color: #2563eb;
+}
+
+.value-card i {
+  font-size: 42px;
+  color: #2563eb;
+  margin-bottom: 20px;
+}
+
+.value-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.value-card p {
+  font-size: 16px;
+  color: #4b5563;
+}
+
+@media (max-width: 768px) {
+  .about-card {
+    padding: 40px 30px;
+  }
+}
+
+
+
+
+
+
+/* ===================== */
+/* YAZILIM ÇÖZÜMLERİ SAYFASI */
+/* ===================== */
+.software-page {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+/* --- HERO --- */
+.software-hero {
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+  color: #fff;
+  text-align: center;
+  padding: 120px 10% 80px;
+}
+
+.software-hero-content h1 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.software-hero-content p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* --- HİZMET KARTLARI --- */
+.software-services {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.software-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.software-card {
+  background: #ffffff;
+  border: 2px solid #d1d5db;
+  border-radius: 16px;
+  padding: 40px 30px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.software-card:hover {
+  transform: translateY(-6px);
+  border-color: #2563eb;
+}
+
+.software-card i {
+  font-size: 42px;
+  color: #2563eb;
+  margin-bottom: 20px;
+}
+
+.software-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.software-card p {
+  font-size: 16px;
+  color: #4b5563;
+}
+
+/* --- CTA --- */
+.software-cta {
+  background: #2563eb;
+  color: #fff;
+  text-align: center;
+  padding: 100px 10%;
+}
+
+.software-cta h2 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.software-cta p {
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 40px;
+}
+
+.software-cta .cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.software-cta .btn {
+  background: #fff;
+  color: #2563eb;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.software-cta .btn:hover {
+  background: #1e40af;
+  color: #fff;
+}
+
+.software-cta .whatsapp {
+  background: #22c55e;
+  color: #fff;
+}
+
+.software-cta .whatsapp:hover {
+  background: #16a34a;
+}
+.software-cta .call {
+  background: #fff;
+  color: #1e40af;
+}
+
+.software-cta .call:hover {
+  background: #fff;
+  color: #1e40af;
+}
+
+@media (max-width: 768px) {
+  .software-card {
+    padding: 30px 24px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* ===================== */
+/* EĞİTİM ATÖLYESİ SAYFASI */
+/* ===================== */
+.academy-page {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+/* --- HERO --- */
+.academy-hero {
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+  color: #fff;
+  text-align: center;
+  padding: 120px 10% 80px;
+}
+
+.academy-hero-content h1 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.academy-hero-content p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* --- EĞİTİM KARTLARI --- */
+.academy-trainings {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.academy-trainings h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  color: #111827;
+}
+
+.academy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.academy-card {
+  background: #fff;
+  border: 2px solid #d1d5db;
+  border-radius: 16px;
+  padding: 40px 30px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.academy-card:hover {
+  transform: translateY(-6px);
+  border-color: #2563eb;
+}
+
+.academy-card i {
+  font-size: 42px;
+  color: #2563eb;
+  margin-bottom: 20px;
+}
+
+.academy-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.academy-card p {
+  font-size: 16px;
+  color: #4b5563;
+}
+
+/* --- CTA --- */
+.academy-cta {
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+  color: #fff;
+  text-align: center;
+  padding: 100px 10%;
+  border-top: 4px solid #1d4ed8;
+}
+
+.academy-cta h2 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.academy-cta p {
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 40px;
+}
+
+.academy-cta .cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.academy-cta .btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  color: #2563eb;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.academy-cta .btn i {
+  font-size: 18px;
+}
+
+.academy-cta .btn:hover {
+  background: #1e40af;
+  color: #fff;
+}
+
+.academy-cta .whatsapp {
+  background: #22c55e;
+  color: #fff;
+}
+
+.academy-cta .whatsapp:hover {
+  background: #16a34a;
+}
+
+.academy-cta .call {
+  background: #fff;
+  color: #1e40af;
+}
+
+.academy-cta .call:hover {
+  background: #fff;
+  color: #1e40af;
+}
+
+@media (max-width: 768px) {
+  .academy-card {
+    padding: 30px 24px;
+  }
+  .academy-hero-content h1 {
+    font-size: 30px;
+  }
+}
+
+
+
+
+
+
+
+/* ===================== */
+/* PYTHON EĞİTİM ALT SAYFALARI (ÇOCUK & YETİŞKİN) */
+/* ===================== */
+
+.python-page {
+  background: #f3f4f6;
+  color: #111827;
+  overflow-x: hidden;
+}
+
+/* --- HERO --- */
+.python-hero {
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+  color: #fff;
+  text-align: center;
+  padding: 120px 10% 90px;
+  position: relative;
+}
+
+.python-hero h1 {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.python-hero p {
+  font-size: clamp(16px, 1.3vw, 20px);
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* --- DERS İÇERİĞİ --- */
+.python-content {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.python-content h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 50px;
+  position: relative;
+  color: #111827;
+  text-align: center;
+}
+
+.python-content h2::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: #2563eb;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.python-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.python-card {
+  background: #fff;
+  border: 2px solid #d1d5db;
+  border-radius: 16px;
+  padding: 40px 30px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.python-card:hover {
+  transform: translateY(-6px);
+  border-color: #2563eb;
+}
+
+.python-card i {
+  font-size: 42px;
+  color: #2563eb;
+  margin-bottom: 20px;
+}
+
+.python-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.python-card p {
+  font-size: 16px;
+  color: #4b5563;
+  line-height: 1.6;
+}
+/* --- DERS İÇERİĞİNİ GÖR BUTONU (LİNK OLARAK YAZILANLAR İÇİN) --- */
+.python-card a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: #fff !important;
+  border: none;
+  padding: 14px 34px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 17px;
+  text-decoration: none;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.35);
+  transition: all 0.3s ease;
+  margin-top: 25px;
+}
+
+.python-card a i {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.python-card a:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.55);
+}
+
+.python-card a:hover i {
+  transform: translateX(6px);
+}
+
+.python-card a:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 8px rgba(37, 99, 235, 0.3);
+}
+
+/* --- CTA (İLETİŞİM) --- */
+.python-cta {
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+  color: #fff;
+  text-align: center;
+  padding: 100px 10%;
+  border-top: 4px solid #1d4ed8;
+}
+
+.python-cta h2 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.python-cta p {
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 40px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.python-cta .cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.python-cta .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  color: #2563eb;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.python-cta .btn i {
+  font-size: 18px;
+}
+
+.python-cta .btn:hover {
+  background: #1e40af;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.python-cta .whatsapp {
+  background: #22c55e;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(34, 197, 94, 0.3);
+}
+
+.python-cta .whatsapp:hover {
+  background: #16a34a;
+  transform: translateY(-3px);
+}
+
+.python-cta .call {
+  background: #fff;
+  color: #1e40af;
+}
+
+.python-cta .call:hover {
+  background: #e0e7ff;
+  color: #1e3a8a;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+  .python-content {
+    padding: 60px 6%;
+  }
+  .python-cta {
+    padding: 80px 6%;
+  }
+}
+
+@media (max-width: 768px) {
+  .python-card {
+    padding: 30px 24px;
+  }
+
+  .python-hero {
+    padding: 100px 6% 70px;
+  }
+
+  .python-hero h1 {
+    font-size: 28px;
+  }
+
+  .python-hero p {
+    font-size: 16px;
+  }
+
+  .python-cta h2 {
+    font-size: 24px;
+  }
+
+  .python-cta p {
+    font-size: 16px;
+  }
+
+  .python-cta .btn {
+    padding: 12px 20px;
+    font-size: 15px;
+  }
+}

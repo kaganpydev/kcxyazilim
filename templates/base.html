@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}KCX Software{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-container">
+
+    <!-- SOL: LOGO -->
+<div class="logo">
+  <a href="{{ url_for('index') }}">
+    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="KCX Logo">
+  </a>
+</div>
+
+
+    <!-- ORTA+SAĞ: MENÜ VE İLETİŞİM TEK ÇERÇEVE -->
+    <div class="menu-wrapper">
+      <nav class="menu">
+        <div class="menu-links">
+          <a href="{{ url_for('index') }}">Ana Sayfa</a>
+          <a href="{{ url_for('yazilim') }}">Yazılım Çözümleri</a>
+          <a href="{{ url_for('akademi') }}">Eğitim Atölyesi</a>
+          <a href="{{ url_for('hakkimizda') }}">Hakkımızda</a>
+        </div>
+
+        <div class="menu-contact">
+          <a href="tel:+905312681398"><i class="fa-solid fa-phone"></i> +90 531 268 13 98</a>
+          <a href="mailto:info@kcxsoftware.com"><i class="fa-solid fa-envelope"></i> info@kcxsoftware.com</a>
+          <a href="https://wa.me/905312681398" target="_blank" class="whatsapp"><i class="fa-brands fa-whatsapp"></i> Tıkla, WhatsApp</a>
+        </div>
+      </nav>
+    </div>
+
+    <!-- HAMBURGER (SADECE 1 ADET) -->
+    <button class="hamburger" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- MOBİL MENU (SADECE 1 ADET) -->
+  <div class="mobile-menu">
+    <nav>
+      <a href="{{ url_for('index') }}">Ana Sayfa</a>
+      <a href="{{ url_for('yazilim') }}">Yazılım Çözümleri</a>
+      <a href="{{ url_for('akademi') }}">Eğitim Atölyesi</a>
+      <a href="{{ url_for('hakkimizda') }}">Hakkımızda</a>
+      <hr>
+      <a href="tel:+905312681398">📞 +90 531 268 13 98</a>
+      <a href="mailto:info@kcxsoftware.com">✉️ info@kcxsoftware.com</a>
+      <a href="https://wa.me/905312681398" target="_blank" class="whatsapp"><i class="fa-brands fa-whatsapp"></i> Tıkla, WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  {% block content %}{% endblock %}
+</main>
+
+<footer>
+  © 2025 KCX Software | Yazılım Çözümleri & Eğitim Atölyesi
+</footer>
+
+<script>
+function toggleMenu(){
+  document.querySelector('.mobile-menu').classList.toggle('active');
+}
+</script>
+
+</body>
+</html>

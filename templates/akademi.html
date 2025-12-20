@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% block title %}Eğitim Atölyesi - KCX Software{% endblock %}
+
+{% block content %}
+<main class="academy-page">
+
+  <!-- ========== HERO ========== -->
+<section class="academy-hero">
+  <div class="academy-hero-content">
+    <h1>KCX ACADEMY Eğitim Atölyesi</h1>
+    <p><strong><em>"Geleceği Kodlayanlardan Olun!"</em></strong></p>
+  </div>
+</section>
+
+
+  <!-- ========== EĞİTİM KARTLARI ========== -->
+  <section class="academy-trainings">
+    <h2>Eğitim Programlarımız</h2>
+    <div class="academy-grid">
+
+      <div class="academy-card">
+        <i class="fa-brands fa-python"></i>
+        <h3>Temel Python Eğitimi</h3>
+        <p>
+          Programlamaya sıfırdan başlayanlar için; değişkenler, koşullar, döngüler ve fonksiyonlarla güçlü bir temel oluşturun.
+        </p>
+      </div>
+
+      <div class="academy-card">
+        <i class="fa-solid fa-code"></i>
+        <h3>Orta - İleri Düzey Python</h3>
+        <p>
+          OOP, modüler yapı, dosya işlemleri ve veri analizi uygulamalarıyla gerçek dünyaya yönelik pratik bilgi kazanın.
+        </p>
+      </div>
+
+      <div class="academy-card">
+        <i class="fa-solid fa-gear"></i>
+        <h3>Otomasyon & Bot Geliştirme</h3>
+        <p>
+          Python ile görevleri otomatikleştiren, veri çeken ve analiz eden akıllı sistemleri adım adım inşa edin.
+        </p>
+      </div>
+
+    </div>
+  </section>
+  <!-- ========== ALT EĞİTİMLER (ALT SAYFALAR) ========== -->
+<section class="academy-subtrainings">
+  <h2 class="subtraining-title">Eğitim İçeriklerimiz</h2>
+  <div class="academy-grid">
+
+    <div class="academy-card">
+      <i class="fa-solid fa-child"></i>
+      <h3>Çocuklar için Python Eğitimi</h3>
+      <p>
+        Eğlenceli projeler, oyun temelli anlatımlar ve renkli örneklerle çocuklara kodlamayı sevdirmek için özel olarak hazırlandı.
+      </p>
+      <div class="view-box">
+        <a href="{{ url_for('cocuk_python') }}" class="view-btn">
+          <i class="fa-solid fa-book-open"></i> Ders İçeriğini Gör
+        </a>
+      </div>
+    </div>
+
+    <div class="academy-card">
+      <i class="fa-solid fa-user-graduate"></i>
+      <h3>Yetişkinler için Python Eğitimi</h3>
+      <p>
+        Uygulamalı örneklerle yazılım kariyerine adım atmak isteyenler için kapsamlı, proje odaklı Python eğitimi.
+      </p>
+      <div class="view-box">
+        <a href="{{ url_for('yetiskin_python') }}" class="view-btn">
+          <i class="fa-solid fa-arrow-right"></i> Ders İçeriğini Gör
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+  <!-- ========== CTA ========== -->
+  <section class="academy-cta">
+    <h2>Python Eğitimine Hemen Başla "Geleceği İnşa Et"</h2>
+    <p>Birebir eğitim fırsatlarını öğrenmek için bizimle iletişime geç!</p>
+    <div class="cta-buttons">
+      <a href="tel:+905312681398" class="btn call"><i class="fa-solid fa-phone"></i> Hemen Ara</a>
+      <a href="https://wa.me/905312681398" target="_blank" class="btn whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      <a href="mailto:info@kcxsoftware.com" class="btn secondary"><i class="fa-solid fa-envelope"></i> Mail Gönder</a>
+    </div>
+  </section>
+
+</main>
+{% endblock %}
