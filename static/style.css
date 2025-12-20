@@ -1,6 +1,4 @@
-/* ===================== */
-/* GENEL */
-/* ===================== */
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -8,9 +6,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ===================== */
-/* HEADER */
-/* ===================== */
+
 .site-header {
   width: 100%;
   background: #f3f4f6;
@@ -18,9 +14,7 @@ body {
   z-index: 1000;
 }
 
-/* ===================== */
-/* HEADER YAPISI */
-/* ===================== */
+
 .header-container {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -31,9 +25,7 @@ body {
   box-sizing: border-box;
 }
 
-/* ===================== */
-/* LOGO (SABİT SOLDAN) */
-/* ===================== */
+
 .logo {
   display: flex;
   align-items: center;
@@ -47,9 +39,7 @@ body {
   transition: all 0.3s ease;
 }
 
-/* ===================== */
-/* ANA MENU + ILETISIM (TEK ÇERÇEVE) */
-/* ===================== */
+
 .menu-wrapper {
   display: flex;
   justify-content: flex-end;
@@ -71,7 +61,7 @@ body {
   width: 100%;
 }
 
-/* Menü linkleri */
+
 .menu-links {
   display: flex;
   align-items: center;
@@ -93,9 +83,7 @@ body {
   color: #2563eb;
 }
 
-/* ===================== */
-/* ILETISIM KISMI (ÇERÇEVE İÇİNDE) */
-/* ===================== */
+
 .menu-contact {
   display: flex;
   align-items: center;
@@ -133,9 +121,7 @@ body {
   color: #16a34a;
 }
 
-/* ===================== */
-/* HAMBURGER */
-/* ===================== */
+
 .hamburger {
   display: none;
   background: none;
@@ -145,16 +131,12 @@ body {
   color: #111827;
 }
 
-/* ===================== */
-/* MOBIL MENU */
-/* ===================== */
+
 .mobile-menu {
   display: none;
 }
 
-/* ===================== */
-/* RESPONSIVE */
-/* ===================== */
+
 @media (max-width: 1280px) {
   .menu {
     padding: 10px clamp(16px, 2vw, 40px);
@@ -256,17 +238,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-/* ANA SAYFA DUZENLEME KODLARI */
-
-/* ======== HERO ======== */
 .hero {
   text-align: center;
   padding: 120px 20px 80px;
@@ -304,7 +275,7 @@ body {
 }
 .btn.secondary:hover { background: #fff; color: #2563eb; }
 
-/* ======== HİZMETLER ======== */
+
 .services {
   text-align: center;
   padding: 80px 40px;
@@ -330,7 +301,7 @@ body {
   margin-bottom: 16px;
 }
 
-/* ======== EĞİTİMLER ======== */
+
 .trainings {
   text-align: center;
   padding: 80px 40px;
@@ -349,7 +320,7 @@ body {
 }
 .training-grid .card:hover { transform: translateY(-5px); }
 
-/* ======== PROJELER ======== */
+
 .projects {
   text-align: center;
   padding: 80px 40px;
@@ -384,7 +355,7 @@ body {
 }
 .project-card:hover .overlay { opacity: 1; }
 
-/* ======== CONTACT CTA ======== */
+
 .contact-cta {
   text-align: center;
   padding: 80px 20px;
@@ -412,7 +383,7 @@ body {
 footer {
   text-align: center;
   padding: 20px 10px;
-  background: #f3f4f6; /* sayfayla aynı renk */
+  background: #f3f4f6; 
   color: #111827;
   font-weight: 600;
   font-size: 16px;
@@ -420,17 +391,12 @@ footer {
 }
 
 
-
-
-/* ===================== */
-/* HAKKIMIZDA SAYFASI */
-/* ===================== */
 .about-page {
   background: #f3f4f6;
   color: #111827;
 }
 
-/* --- HERO --- */
+
 .about-hero {
   background: linear-gradient(135deg, #2563eb, #1e3a8a);
   color: #fff;
@@ -449,7 +415,7 @@ footer {
   opacity: 0.9;
 }
 
-/* --- METİN KUTUSU --- */
+
 .about-content {
   display: flex;
   justify-content: center;
@@ -480,7 +446,7 @@ footer {
   color: #374151;
 }
 
-/* --- DEĞERLER (ALT KARTLAR) --- */
+
 .about-values {
   padding: 80px 10%;
   text-align: center;
@@ -531,19 +497,12 @@ footer {
 }
 
 
-
-
-
-
-/* ===================== */
-/* YAZILIM ÇÖZÜMLERİ SAYFASI */
-/* ===================== */
 .software-page {
   background: #f3f4f6;
   color: #111827;
 }
 
-/* --- HERO --- */
+
 .software-hero {
   background: linear-gradient(135deg, #2563eb, #1e3a8a);
   color: #fff;
@@ -562,7 +521,7 @@ footer {
   opacity: 0.9;
 }
 
-/* --- HİZMET KARTLARI --- */
+
 .software-services {
   padding: 80px 10%;
   text-align: center;
@@ -606,7 +565,7 @@ footer {
   color: #4b5563;
 }
 
-/* --- CTA --- */
+
 .software-cta {
   background: #2563eb;
   color: #fff;
@@ -673,22 +632,12 @@ footer {
 }
 
 
-
-
-
-
-
-
-
-/* ===================== */
-/* EĞİTİM ATÖLYESİ SAYFASI */
-/* ===================== */
 .academy-page {
   background: #f3f4f6;
   color: #111827;
 }
 
-/* --- HERO --- */
+
 .academy-hero {
   background: linear-gradient(135deg, #2563eb, #1e3a8a);
   color: #fff;
@@ -707,7 +656,7 @@ footer {
   opacity: 0.9;
 }
 
-/* --- EĞİTİM KARTLARI --- */
+
 .academy-trainings {
   padding: 80px 10%;
   text-align: center;
@@ -757,7 +706,7 @@ footer {
   color: #4b5563;
 }
 
-/* --- CTA --- */
+
 .academy-cta {
   background: linear-gradient(135deg, #2563eb, #1e3a8a);
   color: #fff;
@@ -835,23 +784,13 @@ footer {
   }
 }
 
-
-
-
-
-
-
-/* ===================== */
-/* PYTHON EĞİTİM ALT SAYFALARI (ÇOCUK & YETİŞKİN) */
-/* ===================== */
-
 .python-page {
   background: #f3f4f6;
   color: #111827;
   overflow-x: hidden;
 }
 
-/* --- HERO --- */
+
 .python-hero {
   background: linear-gradient(135deg, #2563eb, #1e3a8a);
   color: #fff;
@@ -873,7 +812,7 @@ footer {
   margin: 0 auto;
 }
 
-/* --- DERS İÇERİĞİ --- */
+
 .python-content {
   padding: 80px 10%;
   text-align: center;
@@ -937,7 +876,7 @@ footer {
   color: #4b5563;
   line-height: 1.6;
 }
-/* --- DERS İÇERİĞİNİ GÖR BUTONU (LİNK OLARAK YAZILANLAR İÇİN) --- */
+
 .python-card a {
   display: inline-flex;
   align-items: center;
@@ -978,7 +917,7 @@ footer {
   box-shadow: 0 3px 8px rgba(37, 99, 235, 0.3);
 }
 
-/* --- CTA (İLETİŞİM) --- */
+
 .python-cta {
   background: linear-gradient(135deg, #2563eb, #1e3a8a);
   color: #fff;
@@ -1055,7 +994,7 @@ footer {
   color: #1e3a8a;
 }
 
-/* --- RESPONSIVE --- */
+
 @media (max-width: 1024px) {
   .python-content {
     padding: 60px 6%;
@@ -1095,3 +1034,4 @@ footer {
     font-size: 15px;
   }
 }
+
