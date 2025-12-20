@@ -1,4 +1,4 @@
-from flask import Flask, render_template, Response
+from flask import Flask, render_template, Response, send_from_directory
 
 app = Flask(__name__)
 
@@ -36,6 +36,11 @@ def yetiskin_python():
 @app.route('/sitemap.xml')
 def sitemap():
     return Response(render_template('sitemap.xml'), mimetype='application/xml')
+@app.route('/robots.txt')
+def robots_txt():
+    return send_from_directory(app.root_path, 'robots.txt', mimetype='text/plain')
+
 
 if __name__ == "__main__":
     app.run(debug=True)
+
