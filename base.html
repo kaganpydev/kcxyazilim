@@ -4,29 +4,29 @@
   <meta charset="UTF-8">
   <title>{% block title %}KCX Software{% endblock %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- ✅ SEO Meta Etiketleri (Güncellendi) -->
+  
   <meta name="description" content="KCX Yazılım | Python tabanlı web çözümleri, otomasyon sistemleri ve birebir Python eğitimleri. KCX Software ile geleceği kodlayanlardan olun!">
   <meta name="keywords" content="KCX Yazılım, kcx yazilim, kcx yazılım, KCX Software, Python eğitimi, yazılım çözümleri, otomasyon, web geliştirme, Python atölyesi, yazılım şirketi">
   <meta name="author" content="KCX Software">
   <meta name="robots" content="index, follow">
 
-  <!-- ✅ Sosyal Medya (OG ve Twitter Kartları) -->
+  
   <meta property="og:title" content="KCX Yazılım | Yazılım & Python Eğitim Atölyesi">
   <meta property="og:description" content="Modern yazılım çözümleri, Python tabanlı sistemler ve profesyonel eğitimlerle geleceği kodlayanlardan olun.">
   <meta property="og:image" content="{{ url_for('static', filename='images/logo.png') }}">
   <meta property="og:url" content="https://www.kcxsoftware.com/">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- ✅ Favicon -->
+  
   <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png') }}">
 
-  <!-- Font Awesome -->
+  
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   >
 
-  <!-- CSS -->
+ 
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -34,7 +34,7 @@
 <header class="site-header">
   <div class="header-container">
 
-    <!-- SOL: LOGO -->
+    
 <div class="logo">
   <a href="{{ url_for('index') }}">
     <img src="{{ url_for('static', filename='images/logo.png') }}" alt="KCX Logo">
@@ -42,7 +42,7 @@
 </div>
 
 
-    <!-- ORTA+SAĞ: MENÜ VE İLETİŞİM TEK ÇERÇEVE -->
+    
     <div class="menu-wrapper">
       <nav class="menu">
         <div class="menu-links">
@@ -60,13 +60,13 @@
       </nav>
     </div>
 
-    <!-- HAMBURGER (SADECE 1 ADET) -->
+   
     <button class="hamburger" onclick="toggleMenu()">
       <i class="fa-solid fa-bars"></i>
     </button>
   </div>
 
-  <!-- MOBİL MENU (SADECE 1 ADET) -->
+  
   <div class="mobile-menu">
     <nav>
       <a href="{{ url_for('index') }}">Ana Sayfa</a>
@@ -97,3 +97,4 @@ function toggleMenu(){
 
 </body>
 </html>
+
