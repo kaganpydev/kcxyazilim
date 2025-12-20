@@ -5,13 +5,13 @@
   <title>{% block title %}KCX Software{% endblock %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Font Awesome -->
+  
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   >
 
-  <!-- CSS -->
+  
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -19,7 +19,7 @@
 <header class="site-header">
   <div class="header-container">
 
-    <!-- SOL: LOGO -->
+    
 <div class="logo">
   <a href="{{ url_for('index') }}">
     <img src="{{ url_for('static', filename='images/logo.png') }}" alt="KCX Logo">
@@ -27,7 +27,7 @@
 </div>
 
 
-    <!-- ORTA+SAĞ: MENÜ VE İLETİŞİM TEK ÇERÇEVE -->
+    
     <div class="menu-wrapper">
       <nav class="menu">
         <div class="menu-links">
@@ -45,13 +45,13 @@
       </nav>
     </div>
 
-    <!-- HAMBURGER (SADECE 1 ADET) -->
+    
     <button class="hamburger" onclick="toggleMenu()">
       <i class="fa-solid fa-bars"></i>
     </button>
   </div>
 
-  <!-- MOBİL MENU (SADECE 1 ADET) -->
+  
   <div class="mobile-menu">
     <nav>
       <a href="{{ url_for('index') }}">Ana Sayfa</a>
