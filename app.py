@@ -35,7 +35,7 @@ def yetiskin_python():
 
 @app.route('/sitemap.xml')
 def sitemap():
-    return Response(render_template('sitemap.xml'), mimetype='application/xml')
+    return send_from_directory(app.root_path, 'sitemap.xml', mimetype='application/xml')
 @app.route('/robots.txt')
 def robots_txt():
     return send_from_directory(app.root_path, 'robots.txt', mimetype='text/plain')
@@ -43,4 +43,5 @@ def robots_txt():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
