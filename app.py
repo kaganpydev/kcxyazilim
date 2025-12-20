@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, Response
 
 app = Flask(__name__)
 
@@ -33,6 +33,9 @@ def cocuk_python():
 def yetiskin_python():
     return render_template("yetiskin-python.html")
 
+@app.route('/sitemap.xml')
+def sitemap():
+    return Response(render_template('sitemap.xml'), mimetype='application/xml')
 
 if __name__ == "__main__":
     app.run(debug=True)
