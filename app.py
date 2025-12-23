@@ -35,10 +35,15 @@ def sitemap():
 @app.route('/robots.txt')
 def robots_txt():
     return send_from_directory(app.root_path, 'robots.txt', mimetype='text/plain')
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(app.static_folder, 'images/favicon.png', mimetype='image/png')
+
 
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
