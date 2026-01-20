@@ -1,13 +1,6 @@
-from flask import Flask, render_template, send_from_directory, request, redirect
-import os
+from flask import Flask, render_template, Response, send_from_directory
 
 app = Flask(__name__)
-
-
-@app.before_request
-def force_https():
-    if request.headers.get("X-Forwarded-Proto") == "http":
-        return redirect(request.url.replace("http://", "https://"), code=301)
 
 
 @app.route('/')
@@ -26,6 +19,8 @@ def akademi():
 def hakkimizda():
     return render_template("hakkimizda.html")
 
+
+
 @app.route('/akademi/cocuk-python')
 def cocuk_python():
     return render_template("cocuk-python.html")
@@ -34,27 +29,47 @@ def cocuk_python():
 def yetiskin_python():
     return render_template("yetiskin-python.html")
 
-
 @app.route('/sitemap.xml')
 def sitemap():
     return send_from_directory(app.root_path, 'sitemap.xml', mimetype='application/xml')
-
 @app.route('/robots.txt')
 def robots_txt():
     return send_from_directory(app.root_path, 'robots.txt', mimetype='text/plain')
 
+@app.route('/egitmenler')
+def egitmenler():
+    egitmenler = [
+        {
+            "slug": "kagan-cem-kayaci",
+            "ad": "Kağan Cem Kayacı",
+            "unvan": "Python Eğitmeni"
+        }
+    ]
+    return render_template("egitmenler.html", egitmenler=egitmenler)
 
-@app.route('/favicon.ico')
-def favicon():
-    return send_from_directory(
-        os.path.join(app.root_path, 'static'),
-        'favicon.ico',
-        mimetype='image/vnd.microsoft.icon'
-    )
+
+@app.route('/egitmen/<slug>')
+def egitmen_detay(slug):
+    if slug == "kagan-cem-kayaci":
+        egitmen = {
+            "ad": "Kağan Cem Kayacı",
+            "unvan": "Python Eğitmeni",
+            "hakkinda": """
+            Python alanında birebir ve grup eğitimleri veren,
+            başlangıç ve orta seviye öğrencileri gerçek projelerle
+            yazılım dünyasına hazırlayan eğitmendir.
+            """,
+            "sertifikalar": ["Millî Eğitim Bakanlığı (MEB) onaylı, resmî Python Eğitimi Sertifikası",
+    "Yıldız Teknik Üniversitesi tarafından sunulan kapsamlı Python Eğitimi Sertifikası",
+    "Boğaziçi Enstitüsü – Uygulamalı ve İleri Düzey Python Eğitimi Sertifikası"]
+        }
+        return render_template("egitmen_detay.html", egitmen=egitmen)
+
+    return "Eğitmen bulunamadı", 404
+
 
 if __name__ == "__main__":
-    app.run()
-
+    app.run(debug=True)
 
 
 
