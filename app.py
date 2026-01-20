@@ -55,9 +55,9 @@ def egitmen_detay(slug):
             "ad": "Kağan Cem Kayacı",
             "unvan": "Python Eğitmeni",
             "hakkinda": """
-            Python alanında birebir ve grup eğitimleri veren,
-            başlangıç ve orta seviye öğrencileri gerçek projelerle
-            yazılım dünyasına hazırlayan eğitmendir.
+            Yazılım alanında eğitimler veren, birçok öğrenciyle birebir ve grup çalışmaları yürütmüş bir eğitmendir.
+            Anlaşılır anlatımı ve uygulamalı ders yapısıyla, yazılıma yeni başlayanlardan kendini geliştirmek isteyenlere kadar geniş bir kitleye hitap eder.
+            Aynı zamanda KCX Software’in kurucusudur.
             """,
             "sertifikalar": ["Millî Eğitim Bakanlığı (MEB) onaylı, resmî Python Eğitimi Sertifikası",
     "Yıldız Teknik Üniversitesi tarafından sunulan kapsamlı Python Eğitimi Sertifikası",
@@ -70,6 +70,7 @@ def egitmen_detay(slug):
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
