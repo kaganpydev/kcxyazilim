@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="egitmenler">
+    <h1>Eğitmenlerimiz</h1>
+
+    <p>
+        <strong><em></em>
+        Uzman eğitmenlerimizle, yazılım eğitimlerini uygulamalı ve anlaşılır bir deneyime dönüştürüyoruz.
+        </em></strong>
+    </p>
+
+    <ul>
+        {% for e in egitmenler %}
+        <li>
+            <strong>{{ e.ad }}</strong> – {{ e.unvan }}
+            <br>
+            <a href="/egitmen/{{ e.slug }}">Profili Gör</a>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}
