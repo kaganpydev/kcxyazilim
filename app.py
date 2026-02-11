@@ -53,19 +53,27 @@ def egitmen_detay(slug):
     if slug == "kagan-cem-kayaci":
         egitmen = {
             "ad": "Kağan Cem Kayacı",
-            "unvan": "Python Eğitmeni",
+            "unvan": "Python Eğitmeni & KCX Akademi Kurucusu",
             "hakkinda": """
-            Python alanında birebir ve grup eğitimleri veren,
-            başlangıç ve orta seviye öğrencileri gerçek projelerle
-            yazılım dünyasına hazırlayan eğitmendir.
+            Kilis'te Python yazılım eğitimi veren ve KCX Akademi'nin kurucusu olan Kağan Cem Kayacı,
+            sıfırdan ileri seviyeye kadar birebir ve grup Python eğitimleri sunmaktadır.
+            Eğitimlerinde temel programlama mantığı, veri analizi (Pandas), otomasyon sistemleri,
+            proje geliştirme ve gerçek dünya uygulamalarına odaklanmaktadır.
+
+            Kilis Python kursu kapsamında öğrencilerini sadece teorik bilgilerle değil,
+            uygulamalı projelerle yazılım dünyasına hazırlamayı hedeflemektedir.
+            Yazılım öğrenmek isteyenler için disiplinli, sistemli ve proje tabanlı bir eğitim modeli sunar.
             """,
-            "sertifikalar": ["Millî Eğitim Bakanlığı (MEB) onaylı, resmî Python Eğitimi Sertifikası",
-    "Yıldız Teknik Üniversitesi tarafından sunulan kapsamlı Python Eğitimi Sertifikası",
-    "Boğaziçi Enstitüsü – Uygulamalı ve İleri Düzey Python Eğitimi Sertifikası"]
+            "sertifikalar": [
+                "Millî Eğitim Bakanlığı (MEB) onaylı, resmî Python Eğitimi Sertifikası",
+                "Yıldız Teknik Üniversitesi tarafından sunulan kapsamlı Python Eğitimi Sertifikası",
+                "Boğaziçi Enstitüsü – Uygulamalı ve İleri Düzey Python Eğitimi Sertifikası"
+            ]
         }
         return render_template("egitmen_detay.html", egitmen=egitmen)
 
     return "Eğitmen bulunamadı", 404
+
 
 
 @app.route("/kilis-yazilim-python-kursu-egitimi")
@@ -80,4 +88,5 @@ def eski_link():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
