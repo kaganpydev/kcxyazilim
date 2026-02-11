@@ -1365,3 +1365,14 @@ footer {
 .view-btn:hover i {
   transform: translateX(5px);
 }
+
+.kilis-card.highlight {
+  border: 2px solid #2563eb;
+  background: linear-gradient(135deg, #ffffff, #f0f6ff);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.15);
+}
+
+.kilis-card.highlight h3 {
+  color: #1e40af;
+}
+
