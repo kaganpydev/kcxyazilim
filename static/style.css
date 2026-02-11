@@ -237,6 +237,7 @@ body {
   }
 }
 
+
 .hero {
   text-align: center;
   padding: 120px 20px 80px;
@@ -389,11 +390,11 @@ footer {
   border-top: 2px solid #d1d5db;
 }
 
+
 .about-page {
   background: #f3f4f6;
   color: #111827;
 }
-
 
 .about-hero {
   background: linear-gradient(135deg, #2563eb, #1e3a8a);
@@ -412,6 +413,7 @@ footer {
   font-size: 18px;
   opacity: 0.9;
 }
+
 
 .about-content {
   display: flex;
@@ -517,6 +519,7 @@ footer {
   opacity: 0.9;
 }
 
+
 .software-services {
   padding: 80px 10%;
   text-align: center;
@@ -559,7 +562,6 @@ footer {
   font-size: 16px;
   color: #4b5563;
 }
-
 
 .software-cta {
   background: #2563eb;
@@ -783,7 +785,6 @@ footer {
   color: #111827;
   overflow-x: hidden;
 }
-
 
 .python-hero {
   background: linear-gradient(135deg, #2563eb, #1e3a8a);
@@ -1029,6 +1030,7 @@ footer {
   }
 }
 
+
 .egitmenler {
     max-width: 900px;
     margin: 60px auto;
@@ -1083,6 +1085,8 @@ footer {
 .egitmenler a:hover {
     background: #162dcc;
 }
+
+
 
 .egitmen-detay {
     max-width: 800px;
@@ -1140,3 +1144,224 @@ footer {
     font-size: 14px;
 }
 
+
+
+.kilis-section {
+  padding: 80px 40px;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.kilis-container {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.kilis-card {
+  background: #f9fafb;
+  border: 2px solid #d1d5db;
+  border-radius: 16px;
+  padding: 50px 40px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.kilis-card:hover {
+  transform: translateY(-6px);
+  border-color: #2563eb;
+}
+
+.kilis-card h2 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #111827;
+}
+
+.kilis-card p {
+  font-size: 17px;
+  color: #4b5563;
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+
+.kilis-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: #ffffff;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+}
+
+.kilis-btn:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
+  transform: translateY(-3px);
+}
+
+
+.kilis-page {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+
+.kilis-hero {
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+  color: #fff;
+  text-align: center;
+  padding: 120px 10% 80px;
+}
+
+.kilis-hero h1 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.kilis-hero p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+
+.kilis-content {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.kilis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.kilis-card {
+  background: #fff;
+  border: 2px solid #d1d5db;
+  border-radius: 16px;
+  padding: 40px 30px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.kilis-card:hover {
+  transform: translateY(-6px);
+  border-color: #2563eb;
+}
+
+.kilis-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.kilis-card p {
+  font-size: 16px;
+  color: #4b5563;
+}
+
+
+.kilis-cta {
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+  color: #fff;
+  text-align: center;
+  padding: 100px 10%;
+}
+
+.kilis-cta h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.kilis-cta p {
+  margin-bottom: 30px;
+  font-size: 17px;
+}
+
+.kilis-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.kilis-cta .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #2563eb;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.kilis-cta .btn:hover {
+  transform: translateY(-3px);
+  background: #1e40af;
+  color: #ffffff;
+}
+
+
+.kilis-cta .whatsapp {
+  background: #22c55e;
+  color: #fff;
+}
+
+.kilis-cta .whatsapp:hover {
+  background: #16a34a;
+}
+
+.academy-subtrainings {
+  text-align: center;
+  padding: 80px 10%;
+  background: #f3f4f6;
+}
+
+.subtraining-title {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 50px;
+  color: #111827;
+}
+.view-box {
+  margin-top: 25px;
+}
+
+.view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: #ffffff;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+}
+
+.view-btn:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.5);
+}
+
+.view-btn i {
+  transition: transform 0.3s ease;
+}
+
+.view-btn:hover i {
+  transform: translateX(5px);
+}
