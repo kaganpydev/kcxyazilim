@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>{% block title %}KCX Software{% endblock %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
   <meta name="description" content="{% block description %}KCX Yazılım & Eğitim Atölyesi | Kilis merkezli yazılım kursu ve Python eğitimi sunan profesyonel bir eğitim ve yazılım platformudur. Web geliştirme, veri analizi ve otomasyon sistemleri alanlarında proje odaklı online eğitim ve yazılım çözümleri sunmaktayız.{% endblock %}">
   <meta name="keywords" content="Kilis yazılım kursu, Kilis Python eğitimi, Kilis kodlama kursu, yazılım kursu, Python kursu, veri analizi eğitimi, web geliştirme, otomasyon sistemleri, KCX Yazılım, KCX Eğitim Atölyesi">
   <meta name="author" content="KCX Yazılım & Eğitim Atölyesi">
@@ -17,16 +16,15 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://kcxsoftware.com{{ request.path }}">
 
-  
+
   <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png') }}">
 
-  
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   >
 
- 
+
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -34,6 +32,7 @@
 <header class="site-header">
   <div class="header-container">
 
+   
 <div class="logo">
   <a href="{{ url_for('index') }}">
     <img src="{{ url_for('static', filename='images/logo.png') }}" alt="KCX Logo">
@@ -54,77 +53,57 @@
         </div>
 
         <div class="menu-contact">
-  <a href="tel:+905312681398">
-    <i class="fa-solid fa-phone"></i> +90 531 268 13 98
-  </a>
-
-  <a href="mailto:info@kcxsoftware.com">
-    <i class="fa-solid fa-envelope"></i> info@kcxsoftware.com
-  </a>
-
-  <a href="https://wa.me/905312681398" target="_blank" class="whatsapp">
-    <i class="fa-brands fa-whatsapp"></i> WhatsApp
-  </a>
-
-  <a href="https://www.instagram.com/kcxsoftware/" 
-     target="_blank" 
-     class="social-icon instagram"
-     aria-label="KCX Software Instagram">
-    <i class="fa-brands fa-instagram"></i>
-  </a>
-
-  <a href="https://x.com/kcxsoftware" 
-     target="_blank" 
-     class="social-icon twitter"
-     aria-label="KCX Software Twitter">
-    <i class="fa-brands fa-x-twitter"></i>
-  </a>
-</div>
-
+          <a href="tel:+905312681398"><i class="fa-solid fa-phone"></i> +90 531 268 13 98</a>
+          <a href="mailto:info@kcxsoftware.com"><i class="fa-solid fa-envelope"></i> info@kcxsoftware.com</a>
+          <a href="https://wa.me/905312681398" target="_blank" class="whatsapp"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
+          <a href="https://www.instagram.com/kcxsoftware/" 
+   target="_blank" 
+   class="social-icon instagram"
+   aria-label="KCX Software Instagram">
+   <i class="fa-brands fa-instagram"></i>
+   <a href="https://x.com/kcxsoftware" 
+   target="_blank" 
+   class="social-icon twitter"
+   aria-label="KCX Software Twitter">
+   <i class="fa-brands fa-x-twitter"></i>
+</a>
 
         </div>
       </nav>
     </div>
 
-    
+   
     <button class="hamburger" onclick="toggleMenu()">
       <i class="fa-solid fa-bars"></i>
     </button>
   </div>
 
-  
- <div class="mobile-menu">
-  <nav>
-    <a href="{{ url_for('index') }}">Ana Sayfa</a>
-    <a href="{{ url_for('yazilim') }}">Yazılım Çözümleri</a>
-    <a href="{{ url_for('akademi') }}">Eğitim Atölyesi</a>
-    <a href="{{ url_for('hakkimizda') }}">Hakkımızda</a>
-    <a href="/egitmenler">Eğitmenlerimiz</a>
-    <hr>
 
-    <a href="tel:+905312681398">📞 +90 531 268 13 98</a>
-    <a href="mailto:info@kcxsoftware.com">✉️ info@kcxsoftware.com</a>
+  <div class="mobile-menu">
+    <nav>
+      <a href="{{ url_for('index') }}">Ana Sayfa</a>
+      <a href="{{ url_for('yazilim') }}">Yazılım Çözümleri</a>
+      <a href="{{ url_for('akademi') }}">Eğitim Atölyesi</a>
+      <a href="{{ url_for('hakkimizda') }}">Hakkımızda</a>
+      <a href="/egitmenler">Eğitmenlerimiz</a>
+      <hr>
+      <a href="tel:+905312681398">📞 +90 531 268 13 98</a>
+      <a href="mailto:info@kcxsoftware.com">✉️ info@kcxsoftware.com</a>
+      <a href="https://wa.me/905312681398" target="_blank" class="whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          <a href="https://www.instagram.com/kcxsoftware/" 
+   target="_blank" 
+   class="social-icon instagram"
+   aria-label="KCX Software Instagram">
+   <i class="fa-brands fa-instagram"></i></i> Instagram Hesabımız</a>
+   <a href="https://x.com/kcxsoftware" 
+   target="_blank" 
+   class="social-icon twitter"
+   aria-label="KCX Software Twitter">
+   <i class="fa-brands fa-x-twitter"></i></i> X Hesabımız</a>
+</a>
 
-    <a href="https://wa.me/905312681398" target="_blank" class="whatsapp">
-      <i class="fa-brands fa-whatsapp"></i> WhatsApp
-    </a>
-
-    <a href="https://www.instagram.com/kcxsoftware/" 
-       target="_blank" 
-       class="social-icon instagram"
-       aria-label="KCX Software Instagram">
-      <i class="fa-brands fa-instagram"></i> Instagram Hesabımız
-    </a>
-
-    <a href="https://x.com/kcxsoftware" 
-       target="_blank" 
-       class="social-icon twitter"
-       aria-label="KCX Software Twitter">
-      <i class="fa-brands fa-x-twitter"></i> X Hesabımız
-    </a>
-  </nav>
-</div>
-
+    </nav>
+  </div>
 </header>
 
 <main>
@@ -150,5 +129,3 @@ function toggleMenu(){
 
 </body>
 </html>
-
-
