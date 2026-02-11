@@ -68,11 +68,16 @@ def egitmen_detay(slug):
     return "Eğitmen bulunamadı", 404
 
 
-
-@app.route("/kilis-python-kursu")
+@app.route("/kilis-yazilim-python-kursu-egitimi")
 def kilis_python_kursu():
     return render_template("kilis_python.html")
 
+from flask import redirect
+
+@app.route("/kilis-python-kursu")
+def eski_link():
+    return redirect("/kilis-yazilim-python-kursu-egitimi", code=301)
 
 if __name__ == "__main__":
     app.run(debug=True)
+
