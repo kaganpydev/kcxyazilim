@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.kcxsoftware.com/sitemap.xml
+Sitemap: https://kcxsoftware.com/sitemap.xml
+
