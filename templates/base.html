@@ -4,12 +4,11 @@
   <meta charset="UTF-8">
   <title>{% block title %}KCX Software{% endblock %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
-  <meta name="description" content="KCX Yazılım | Python ile web çözümleri, veri analizi, bot & algoritma geliştirme; birebir ve grup eğitimler. KCX Software ile geleceği kodlayanlardan olun!">
-  <meta name="keywords" content="KCX Yazılım, kcx yazilim, kcx yazılım, KCX Software, Python eğitimi, yazılım çözümleri, otomasyon, web geliştirme, Python atölyesi, yazılım şirketi">
-  <meta name="author" content="KCX Software">
+  
+  <meta name="description" content="{% block description %}KCX Yazılım & Eğitim Atölyesi | Kilis merkezli yazılım kursu ve Python eğitimi sunan profesyonel bir eğitim ve yazılım platformudur. Web geliştirme, veri analizi ve otomasyon sistemleri alanlarında proje odaklı online eğitim ve yazılım çözümleri sunmaktayız.{% endblock %}">
+  <meta name="keywords" content="Kilis yazılım kursu, Kilis Python eğitimi, Kilis kodlama kursu, yazılım kursu, Python kursu, veri analizi eğitimi, web geliştirme, otomasyon sistemleri, KCX Yazılım, KCX Eğitim Atölyesi">
+  <meta name="author" content="KCX Yazılım & Eğitim Atölyesi">
   <meta name="robots" content="index, follow">
-
 
   <meta property="og:title" content="KCX Yazılım | Yazılım & Python Eğitim Atölyesi">
   <meta property="og:description" content="Modern yazılım çözümleri, Python tabanlı sistemler ve profesyonel eğitimlerle geleceği kodlayanlardan olun.">
@@ -17,23 +16,22 @@
   <meta property="og:url" content="https://www.kcxsoftware.com/">
   <meta name="twitter:card" content="summary_large_image">
 
-
+  
   <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png') }}">
 
-
+  
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   >
 
-
+ 
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
 <header class="site-header">
   <div class="header-container">
-
 
 <div class="logo">
   <a href="{{ url_for('index') }}">
@@ -42,7 +40,7 @@
 </div>
 
 
-
+    
     <div class="menu-wrapper">
       <nav class="menu">
         <div class="menu-links">
@@ -74,13 +72,13 @@
       </nav>
     </div>
 
-
+    
     <button class="hamburger" onclick="toggleMenu()">
       <i class="fa-solid fa-bars"></i>
     </button>
   </div>
 
-
+  
   <div class="mobile-menu">
     <nav>
       <a href="{{ url_for('index') }}">Ana Sayfa</a>
@@ -113,7 +111,14 @@
 </main>
 
 <footer>
-  © 2025 KCX Software | Yazılım Çözümleri & Eğitim Atölyesi
+  <div class="footer-content">
+    <p>© 2025 KCX Software | Yazılım Çözümleri & Eğitim Atölyesi</p>
+
+    <p>
+      Kilis'te yazılım kursu ve Python eğitimi için 
+      <a href="/kilis-python-kursu">detaylı bilgi alın</a>.
+    </p>
+  </div>
 </footer>
 
 <script>
@@ -124,4 +129,3 @@ function toggleMenu(){
 
 </body>
 </html>
-
