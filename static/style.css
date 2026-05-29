@@ -1595,15 +1595,16 @@ footer {
 
 #kcx-input {
   flex: 1;
+  height: 42px;
   min-height: 42px;
-  max-height: 120px;
+  max-height: 42px;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 12px;
   outline: none;
   resize: none;
   font-family: Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.35;
 }
 
