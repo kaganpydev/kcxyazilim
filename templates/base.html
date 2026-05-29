@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <title>{% block title %}KCX Software{% endblock %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
+  <!-- ✅ SEO Meta Etiketleri (Güncellendi) -->
   <meta name="description" content="Kilis’te yazılım, Python eğitimleri ve profesyonel yazılım çözümleri. KCX Yazılım & Eğitim Atölyesi ile proje odaklı yazılım kursu ve veri analizi eğitimi.">
   <meta name="keywords" content="Kilis yazılım kursu, Kilis Python eğitimi, Kilis kodlama kursu, yazılım kursu, Python kursu, veri analizi eğitimi, web geliştirme, otomasyon sistemleri, KCX Yazılım, KCX Eğitim Atölyesi">
   <meta name="author" content="KCX Yazılım & Eğitim Atölyesi">
   <meta name="robots" content="index, follow">
 
-  
+  <!-- ✅ Sosyal Medya (OG ve Twitter Kartları) -->
   <meta property="og:title" content="KCX Yazılım | Yazılım & Python Eğitim Atölyesi">
   <meta property="og:description" content="Modern yazılım çözümleri, Python tabanlı sistemler ve profesyonel eğitimlerle geleceği kodlayanlardan olun.">
   <meta property="og:image" content="{{ url_for('static', filename='images/logo.png') }}">
@@ -18,16 +18,16 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://kcxsoftware.com{{ request.path }}">
 
- 
+  <!-- ✅ Favicon -->
   <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png') }}">
 
- 
+  <!-- Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   >
 
-
+  <!-- CSS -->
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -35,7 +35,7 @@
 <header class="site-header">
   <div class="header-container">
 
-   
+    <!-- SOL: LOGO -->
 <div class="logo">
   <a href="{{ url_for('index') }}">
     <img src="{{ url_for('static', filename='images/logo.png') }}" alt="KCX Logo">
@@ -43,7 +43,7 @@
 </div>
 
 
-    
+    <!-- ORTA+SAĞ: MENÜ VE İLETİŞİM TEK ÇERÇEVE -->
     <div class="menu-wrapper">
       <nav class="menu">
         <div class="menu-links">
@@ -75,12 +75,13 @@
       </nav>
     </div>
 
-    
+    <!-- HAMBURGER (SADECE 1 ADET) -->
     <button class="hamburger" onclick="toggleMenu()">
       <i class="fa-solid fa-bars"></i>
     </button>
   </div>
 
+  <!-- MOBİL MENU (SADECE 1 ADET) -->
   <div class="mobile-menu">
     <nav>
       <a href="{{ url_for('index') }}">Ana Sayfa</a>
@@ -141,6 +142,77 @@ if (comments.length > 0) {
 }
 </script>
 
-</body>
-</html>
 
+
+<!-- KCX AI WIDGET -->
+<div id="kcx-ai">
+
+  <!-- AÇ/KAPA BUTONU -->
+  <div id="kcx-ai-fab" onclick="toggleChat()">
+    <img
+      src="{{ url_for('static', filename='logo.png') }}"
+      class="kcx-ai-fab-logo"
+      alt="KCX AI"
+    >
+
+    <span>KCX AI</span>
+  </div>
+
+  <!-- PANEL -->
+  <div id="kcx-ai-panel">
+
+    <!-- HEADER -->
+    <div id="kcx-ai-header">
+
+      <div class="kcx-ai-header-left">
+
+        <img
+          src="{{ url_for('static', filename='logo.png') }}"
+          class="kcx-ai-logo"
+          alt="KCX AI"
+        >
+
+        <div>
+          <div class="kcx-ai-title">
+            KCX AI Tutor
+          </div>
+
+          <div class="kcx-ai-subtitle">
+            Python Eğitim Asistanı
+          </div>
+        </div>
+
+      </div>
+
+      <div
+        class="kcx-ai-close"
+        onclick="toggleChat()"
+      >
+        ✕
+      </div>
+
+    </div>
+
+    <!-- MESAJLAR -->
+    <div id="kcx-ai-body"></div>
+
+    <!-- ALT KISIM -->
+    <div id="kcx-ai-footer">
+
+      <textarea
+        id="kcx-input"
+        placeholder="Python sorunuzu yazın..."
+        rows="2"
+      ></textarea>
+
+      <button onclick="sendMsg()">
+        ➤
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
