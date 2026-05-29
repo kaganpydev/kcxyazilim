@@ -1,4 +1,6 @@
-
+/* ===================== */
+/* GENEL */
+/* ===================== */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -6,7 +8,9 @@ body {
   overflow-x: hidden;
 }
 
-
+/* ===================== */
+/* HEADER */
+/* ===================== */
 .site-header {
   width: 100%;
   background: #f3f4f6;
@@ -14,7 +18,9 @@ body {
   z-index: 1000;
 }
 
-
+/* ===================== */
+/* HEADER YAPISI */
+/* ===================== */
 .header-container {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -25,7 +31,9 @@ body {
   box-sizing: border-box;
 }
 
-
+/* ===================== */
+/* LOGO (SABİT SOLDAN) */
+/* ===================== */
 .logo {
   display: flex;
   align-items: center;
@@ -39,7 +47,9 @@ body {
   transition: all 0.3s ease;
 }
 
-
+/* ===================== */
+/* ANA MENU + ILETISIM (TEK ÇERÇEVE) */
+/* ===================== */
 .menu-wrapper {
   display: flex;
   justify-content: flex-end;
@@ -61,7 +71,7 @@ body {
   width: 100%;
 }
 
-
+/* Menü linkleri */
 .menu-links {
   display: flex;
   align-items: center;
@@ -83,6 +93,9 @@ body {
   color: #2563eb;
 }
 
+/* ===================== */
+/* ILETISIM KISMI (ÇERÇEVE İÇİNDE) */
+/* ===================== */
 .menu-contact {
   display: flex;
   align-items: center;
@@ -120,7 +133,9 @@ body {
   color: #16a34a;
 }
 
-
+/* ===================== */
+/* HAMBURGER */
+/* ===================== */
 .hamburger {
   display: none;
   background: none;
@@ -130,11 +145,16 @@ body {
   color: #111827;
 }
 
-
+/* ===================== */
+/* MOBIL MENU */
+/* ===================== */
 .mobile-menu {
   display: none;
 }
 
+/* ===================== */
+/* RESPONSIVE */
+/* ===================== */
 @media (max-width: 1280px) {
   .menu {
     padding: 10px clamp(16px, 2vw, 40px);
@@ -235,6 +255,18 @@ body {
   }
 }
 
+
+
+
+
+
+
+
+
+
+/* ANA SAYFA DUZENLEME KODLARI */
+
+/* ======== HERO ======== */
 .hero {
   text-align: center;
   padding: 120px 20px 80px;
@@ -272,7 +304,7 @@ body {
 }
 .btn.secondary:hover { background: #fff; color: #2563eb; }
 
-
+/* ======== HİZMETLER ======== */
 .services {
   text-align: center;
   padding: 80px 40px;
@@ -298,6 +330,7 @@ body {
   margin-bottom: 16px;
 }
 
+/* ======== EĞİTİMLER ======== */
 .trainings {
   text-align: center;
   padding: 80px 40px;
@@ -316,7 +349,7 @@ body {
 }
 .training-grid .card:hover { transform: translateY(-5px); }
 
-
+/* ======== PROJELER ======== */
 .projects {
   text-align: center;
   padding: 80px 40px;
@@ -351,6 +384,7 @@ body {
 }
 .project-card:hover .overlay { opacity: 1; }
 
+/* ======== CONTACT CTA ======== */
 .contact-cta {
   text-align: center;
   padding: 80px 20px;
@@ -378,7 +412,7 @@ body {
 footer {
   text-align: center;
   padding: 20px 10px;
-  background: #f3f4f6; 
+  background: #f3f4f6; /* sayfayla aynı renk */
   color: #111827;
   font-weight: 600;
   font-size: 16px;
@@ -386,12 +420,17 @@ footer {
 }
 
 
+
+
+/* ===================== */
+/* HAKKIMIZDA SAYFASI */
+/* ===================== */
 .about-page {
   background: #f3f4f6;
   color: #111827;
 }
 
-
+/* --- HERO --- */
 .about-hero {
   background: linear-gradient(135deg, #2563eb, #1e3a8a);
   color: #fff;
@@ -410,7 +449,7 @@ footer {
   opacity: 0.9;
 }
 
-
+/* --- METİN KUTUSU --- */
 .about-content {
   display: flex;
   justify-content: center;
@@ -441,7 +480,7 @@ footer {
   color: #374151;
 }
 
-
+/* --- DEĞERLER (ALT KARTLAR) --- */
 .about-values {
   padding: 80px 10%;
   text-align: center;
@@ -491,12 +530,20 @@ footer {
   }
 }
 
+
+
+
+
+
+/* ===================== */
+/* YAZILIM ÇÖZÜMLERİ SAYFASI */
+/* ===================== */
 .software-page {
   background: #f3f4f6;
   color: #111827;
 }
 
-
+/* --- HERO --- */
 .software-hero {
   background: linear-gradient(135deg, #2563eb, #1e3a8a);
   color: #fff;
@@ -515,7 +562,7 @@ footer {
   opacity: 0.9;
 }
 
-
+/* --- HİZMET KARTLARI --- */
 .software-services {
   padding: 80px 10%;
   text-align: center;
@@ -559,7 +606,7 @@ footer {
   color: #4b5563;
 }
 
-
+/* --- CTA --- */
 .software-cta {
   background: #2563eb;
   color: #fff;
@@ -625,12 +672,23 @@ footer {
   }
 }
 
+
+
+
+
+
+
+
+
+/* ===================== */
+/* EĞİTİM ATÖLYESİ SAYFASI */
+/* ===================== */
 .academy-page {
   background: #f3f4f6;
   color: #111827;
 }
 
-
+/* --- HERO --- */
 .academy-hero {
   background: linear-gradient(135deg, #2563eb, #1e3a8a);
   color: #fff;
@@ -649,7 +707,7 @@ footer {
   opacity: 0.9;
 }
 
-
+/* --- EĞİTİM KARTLARI --- */
 .academy-trainings {
   padding: 80px 10%;
   text-align: center;
@@ -699,7 +757,7 @@ footer {
   color: #4b5563;
 }
 
-
+/* --- CTA --- */
 .academy-cta {
   background: linear-gradient(135deg, #2563eb, #1e3a8a);
   color: #fff;
@@ -777,13 +835,23 @@ footer {
   }
 }
 
+
+
+
+
+
+
+/* ===================== */
+/* PYTHON EĞİTİM ALT SAYFALARI (ÇOCUK & YETİŞKİN) */
+/* ===================== */
+
 .python-page {
   background: #f3f4f6;
   color: #111827;
   overflow-x: hidden;
 }
 
-
+/* --- HERO --- */
 .python-hero {
   background: linear-gradient(135deg, #2563eb, #1e3a8a);
   color: #fff;
@@ -805,7 +873,7 @@ footer {
   margin: 0 auto;
 }
 
-
+/* --- DERS İÇERİĞİ --- */
 .python-content {
   padding: 80px 10%;
   text-align: center;
@@ -869,7 +937,7 @@ footer {
   color: #4b5563;
   line-height: 1.6;
 }
-
+/* --- DERS İÇERİĞİNİ GÖR BUTONU (LİNK OLARAK YAZILANLAR İÇİN) --- */
 .python-card a {
   display: inline-flex;
   align-items: center;
@@ -910,7 +978,7 @@ footer {
   box-shadow: 0 3px 8px rgba(37, 99, 235, 0.3);
 }
 
-
+/* --- CTA (İLETİŞİM) --- */
 .python-cta {
   background: linear-gradient(135deg, #2563eb, #1e3a8a);
   color: #fff;
@@ -987,7 +1055,7 @@ footer {
   color: #1e3a8a;
 }
 
-
+/* --- RESPONSIVE --- */
 @media (max-width: 1024px) {
   .python-content {
     padding: 60px 6%;
@@ -1028,6 +1096,9 @@ footer {
   }
 }
 
+
+/* EĞİTMENLER KISMI
+/* ===== Eğitmenler Sayfası ===== */
 
 .egitmenler {
     max-width: 900px;
@@ -1084,6 +1155,7 @@ footer {
     background: #162dcc;
 }
 
+/* ===== Eğitmen Detay ===== */
 
 .egitmen-detay {
     max-width: 800px;
@@ -1141,6 +1213,9 @@ footer {
     font-size: 14px;
 }
 
+/* ===================== */
+/* KİLİS SEO SECTION */
+/* ===================== */
 
 .kilis-section {
   padding: 80px 40px;
@@ -1199,14 +1274,16 @@ footer {
   background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
   transform: translateY(-3px);
 }
-
+/* ===================== */
+/* KİLİS PYTHON SAYFASI */
+/* ===================== */
 
 .kilis-page {
   background: #f3f4f6;
   color: #111827;
 }
 
-
+/* HERO */
 .kilis-hero {
   background: linear-gradient(135deg, #2563eb, #1e3a8a);
   color: #fff;
@@ -1225,7 +1302,7 @@ footer {
   opacity: 0.9;
 }
 
-
+/* CONTENT */
 .kilis-content {
   padding: 80px 10%;
   text-align: center;
@@ -1262,7 +1339,7 @@ footer {
   color: #4b5563;
 }
 
-
+/* CTA */
 .kilis-cta {
   background: linear-gradient(135deg, #2563eb, #1e3a8a);
   color: #fff;
@@ -1317,6 +1394,15 @@ footer {
   background: #16a34a;
 }
 
+
+
+
+
+
+
+
+
+
 .academy-subtrainings {
   text-align: center;
   padding: 80px 10%;
@@ -1361,7 +1447,7 @@ footer {
 .view-btn:hover i {
   transform: translateX(5px);
 }
-
+/* Kilis Extra Highlight Kart */
 .kilis-card.highlight {
   border: 2px solid #2563eb;
   background: linear-gradient(135deg, #ffffff, #f0f6ff);
@@ -1371,6 +1457,7 @@ footer {
 .kilis-card.highlight h3 {
   color: #1e40af;
 }
+/* ===== KCX ÖĞRENCİ YORUMLARI ===== */
 
 .kcx-testimonials {
     padding: 80px 20px;
@@ -1426,7 +1513,7 @@ footer {
     font-weight: 500;
 }
 
-
+/* ===== KCX MOBİL FINAL ===== */
 @media (max-width: 768px) {
 
     .kcx-testimonials {
@@ -1457,4 +1544,228 @@ footer {
         font-size: 16px;
     }
 
+}
+
+
+
+/* =========================
+   KCX AI WIDGET
+========================= */
+
+#kcx-ai {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 99999;
+  font-family: Arial, sans-serif;
+}
+
+/* BUTTON */
+#kcx-ai-fab {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  background: #111;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  user-select: none;
+}
+
+#kcx-ai-fab img,
+.kcx-ai-fab-logo {
+  width: 38px !important;
+  height: 38px !important;
+  min-width: 38px;
+  min-height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  background: #111;
+  flex-shrink: 0;
+  display: block;
+}
+
+#kcx-ai-fab span {
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* PANEL */
+#kcx-ai-panel {
+  display: none;
+  flex-direction: column;
+  width: 380px;
+  height: 540px;
+  max-width: calc(100vw - 40px);
+  max-height: calc(100vh - 100px);
+  background: #fff;
+  border-radius: 18px;
+  margin-top: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+/* HEADER */
+#kcx-ai-header {
+  background: #111;
+  color: #fff;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.kcx-ai-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.kcx-ai-logo {
+  width: 52px !important;
+  height: 52px !important;
+  min-width: 52px;
+  min-height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  background: #111;
+  flex-shrink: 0;
+  display: block;
+}
+
+.kcx-ai-title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.kcx-ai-subtitle {
+  font-size: 12px;
+  opacity: 0.75;
+  margin-top: 2px;
+  line-height: 1.2;
+}
+
+.kcx-ai-close {
+  cursor: pointer;
+  font-size: 22px;
+  opacity: 0.8;
+  padding: 4px 6px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.kcx-ai-close:hover {
+  opacity: 1;
+}
+
+/* BODY */
+#kcx-ai-body {
+  flex: 1;
+  padding: 14px;
+  overflow-y: auto;
+  background: #f7f7f8;
+}
+
+/* FOOTER */
+#kcx-ai-footer {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  border-top: 1px solid #ddd;
+  padding: 10px;
+  background: #fff;
+}
+
+#kcx-input {
+  flex: 1;
+  min-height: 42px;
+  max-height: 120px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  outline: none;
+  resize: none;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+#kcx-input:focus {
+  border-color: #111;
+}
+
+#kcx-ai-footer button {
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 11px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+#kcx-ai-footer button:hover {
+  opacity: 0.9;
+}
+
+/* MOBILE */
+@media (max-width: 500px) {
+  #kcx-ai {
+    right: 12px;
+    left: auto;
+    bottom: 12px;
+  }
+
+  #kcx-ai-fab {
+    padding: 9px 13px;
+    gap: 8px;
+  }
+
+  #kcx-ai-fab img,
+  .kcx-ai-fab-logo {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px;
+    min-height: 36px;
+  }
+
+  #kcx-ai-fab span {
+    font-size: 13px;
+  }
+
+  #kcx-ai-panel {
+    width: calc(100vw - 24px);
+    height: 75vh;
+    max-width: 360px;
+    max-height: 75vh;
+    border-radius: 16px;
+  }
+
+  #kcx-ai-header {
+    padding: 12px;
+  }
+
+  .kcx-ai-logo {
+    width: 46px !important;
+    height: 46px !important;
+    min-width: 46px;
+    min-height: 46px;
+  }
+
+  .kcx-ai-title {
+    font-size: 15px;
+  }
+
+  .kcx-ai-subtitle {
+    font-size: 11px;
+  }
 }
