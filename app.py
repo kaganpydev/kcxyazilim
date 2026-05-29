@@ -6,7 +6,7 @@ import json
 
 app = Flask(__name__)
 
-# ---------------- SUPABASE ----------------
+
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 
@@ -15,7 +15,7 @@ supabase = create_client(
     SUPABASE_KEY
 )
 
-# ---------------- OPENAI ----------------
+
 client = OpenAI(
     api_key=os.getenv("OPENAI_API_KEY")
 )
@@ -105,16 +105,12 @@ def eski_link():
 import os
 from flask import request, jsonify
 
-# =========================
-# DEBUG
-# =========================
+
 def log(*args):
     print("[KCX DEBUG]", *args)
 
 
-# =========================
-# SYSTEM PROMPT
-# =========================
+
 SYSTEM_PROMPT = """
 Sen KCX AI Tutor'sun.
 
@@ -681,9 +677,6 @@ ASLA YAPMA:
 """
 
 
-# =========================
-# TEST ROUTE
-# =========================
 @app.route("/test", methods=["GET"])
 def test():
     return jsonify({
@@ -691,9 +684,6 @@ def test():
     })
 
 
-# =========================
-# MAIN AI ENDPOINT
-# =========================
 @app.route("/ask", methods=["POST"])
 def ask():
     try:
